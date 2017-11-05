@@ -1,3 +1,5 @@
+package Interface;
+
 public abstract class button implements processingGUI {
    PImage img;
    int x;
@@ -36,13 +38,13 @@ public abstract class button implements processingGUI {
      }
    }
 
-   public screen(){
+   public void screen(){
      image(img, x, y);
    }
 
-   abstract public update() { }
+   abstract public void update() { }
 
-   public collision(){
+   public void collision(){
      int colX = mouseX - butX;
      int colY = mouseY - butY;
      if(colX >= 0 && colX < wid && colY >= 0 & colY < hei){
@@ -52,5 +54,5 @@ public abstract class button implements processingGUI {
      }
    }
 
-   abstract public click() { }
+   abstract public void click() { }
 }

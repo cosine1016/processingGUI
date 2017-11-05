@@ -1,3 +1,5 @@
+package Interface;
+
 public class GUIManager{
   ArrayList<processingGUI> guiList;
   int focus;
@@ -7,14 +9,14 @@ public class GUIManager{
     focus = -1;
   }
 
-  public update(){
+  public void update(){
     for(int i = 0; i < guiList.length; i++){
       guiList.get(i).update();
       guiList.get(i).screen();
     }
   }
 
-  mousePressed(){
+  void mousePressed(){
     for(int i = 0; i < guiList.length; i++){
       guiList.get(i).collision();
     }
