@@ -12,14 +12,14 @@ public abstract class button implements processingGUI {
      y = _y;
      wid = butImg.width;
      hei = butImg.height;
-     collision = new boolean[wid * hei];
+     judge = new boolean[wid * hei];
      img.loadPixels()
      color[] c = img.pixels;
      for(int i = 0; i < wid * hei; i++){
        if(c[i].alpha == 0) {
-         judge = false;
+         judge[i] = false;
        } else {
-         judge = true;
+         judge[i] = true;
        }
      }
    }
@@ -30,9 +30,9 @@ public abstract class button implements processingGUI {
      y = _y;
      wid = _w;
      hei = _h;
-     collision = new boolean[wid * hei];
+     judge = new boolean[wid * hei];
      for(int i = 0; i < wid * hei; i++){
-       collision[i] = true;
+       judge[i] = true;
      }
    }
 
@@ -40,15 +40,17 @@ public abstract class button implements processingGUI {
      image(img, x, y);
    }
 
-   public update(){
-
-   }
+   abstract public update() { }
 
    public collision(){
-     
+     int colX = mouseX - butX;
+     int colY = mouseY - butY;
+     if(colX >= 0 && colX < wid && colY >= 0 & colY < hei){
+       if(judge[colX + colY * wid]){
+         click();
+       }
+     }
    }
 
-   public hit(){
-
-   }
+   abstract public click() { }
 }
