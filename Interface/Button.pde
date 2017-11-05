@@ -37,7 +37,7 @@ public abstract class button implements processingGUI {
    }
 
    public screen(){
-
+     image(img, x, y);
    }
 
    public update(){
@@ -45,7 +45,7 @@ public abstract class button implements processingGUI {
    }
 
    public collision(){
-
+     
    }
 
    public hit(){
