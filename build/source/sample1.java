@@ -14,22 +14,22 @@ import java.io.IOException;
 
 public class sample1 extends PApplet {
 
-public cosineInterface.GUIManager GM;
-PImage B;
 
 public void setup(){
-
+//  public GUIManager GM;
+  PImage B;
   
   B = loadImage("B.png");
-  GM = new cosineInterface.GUIManager();
-  GM.guiList.add(new Bbutton(B,140,140));
+//  GM = new GUIManager();
+//  GM.guiList.add(new Bbutton(B,140,140));
 }
 
 public void draw(){
   background(255);
-  GM.update();
+  //GM.update();
 }
-public class Bbutton extends cosineInterface.button{
+
+public class Bbutton extends button{
   public Bbutton(Pimage _img, int _x, int _y){
     super(_img, _x, _y);
   }

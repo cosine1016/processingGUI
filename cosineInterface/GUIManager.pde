@@ -1,5 +1,3 @@
-package Interface;
-
 public class GUIManager{
   ArrayList<processingGUI> guiList;
   int focus;

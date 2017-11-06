@@ -1,5 +1,3 @@
-package Interface;
-
 public abstract class button implements processingGUI {
    PImage img;
    int x;

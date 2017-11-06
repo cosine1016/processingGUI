@@ -1,6 +1,4 @@
-import Interface.*;
-
-public class Bbutton extends button{
+public class Bbutton extends cosineInterface.button{
   public Bbutton(Pimage _img, int _x, int _y){
     super(_img, _x, _y);
   }
