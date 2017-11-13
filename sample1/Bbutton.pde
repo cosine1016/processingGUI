@@ -1,12 +1,12 @@
-public class Bbutton extends cosineInterface.button{
-  public Bbutton(Pimage _img, int _x, int _y){
+public class Bbutton extends button{
+  public Bbutton(PImage _img, int _x, int _y){
     super(_img, _x, _y);
   }
 
   public void update(){}
 
   public void click(){
-    GM.add(new Bbutton(butImg,random(300),random(300)));
+    GM.guiList.add(new Bbutton(img,(int)random(300),(int)random(300)));
   }
 
 }
