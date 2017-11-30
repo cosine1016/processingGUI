@@ -8,14 +8,14 @@ public class GUIManager{
   }
 
   public void update(){
-    for(int i = 0; i < guiList.length; i++){
+    for(int i = 0; i < guiList.size(); i++){
       guiList.get(i).update();
       guiList.get(i).screen();
     }
   }
 
   void mousePressed(){
-    for(int i = 0; i < guiList.length; i++){
+    for(int i = 0; i < guiList.size(); i++){
       guiList.get(i).collision();
     }
   }
