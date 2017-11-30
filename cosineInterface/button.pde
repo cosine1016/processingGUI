@@ -1,10 +1,11 @@
 public class button implements processingGUI {
-   PImage img;
-   int x;
-   int y;
-   int wid;
-   int hei;
-   boolean[] judge;
+   PImage img; //ボタン画像
+   int x; //表示位置（左上）
+   int y; //表示位置（左上）
+   int wid; //ボタンサイズ
+   int hei; //ボタンサイズ
+   boolean[] judge; //当たり判定
+
 
    public button(PImage _img, int _x, int _y){
      img = _img;
@@ -24,7 +25,7 @@ public class button implements processingGUI {
      }
    }
 
-   public button(int _w, int _h, int _x, int _y){
+   /*public button(int _w, int _h, int _x, int _y){
      img = null;
      x = _x;
      y = _y;
@@ -34,7 +35,7 @@ public class button implements processingGUI {
      for(int i = 0; i < wid * hei; i++){
        judge[i] = true;
      }
-   }
+   }*/
 
    public void screen(){
      image(img, x, y);
